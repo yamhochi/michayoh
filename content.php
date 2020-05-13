@@ -13,7 +13,7 @@
 if ( ($foliopress_settings['foliopress_post_layout'] != 'list_view') && ( !is_single() ) ) { ?>
 	<div <?php post_class('col-sm-6 col-lg-4'); ?> >
 		<?php $attachment_id = get_post_thumbnail_id(); ?>
-		<a class="entry-wrap" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" <?php if( has_post_thumbnail() && !has_post_format('quote') ): ?> style="background-image:url('<?php echo esc_url( wp_get_attachment_image_url( $attachment_id, 'full' ) )?>');" <?php endif; ?> >
+		<a class="entry-wrap modal-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" <?php if( has_post_thumbnail() && !has_post_format('quote') ): ?> style="background-image:url('<?php echo esc_url( wp_get_attachment_image_url( $attachment_id, 'full' ) )?>');" <?php endif; ?> >
 			<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?> 
 				<span class="sticky-post"></span>
 			<?php } ?>
